@@ -1,0 +1,46 @@
+{
+  "_comment": "评价指标阈值配置",
+  "ai_metrics": {
+    "syncnet_distance": {
+      "threshold": 7.5,
+      "direction": "lower_is_better": true,
+      "weight": 0.4
+    },
+    "lse_c": {
+      "threshold": 5.0,
+      "direction": "higher_is_better": true,
+      "weight": 0.35
+    },
+    "lse_d": {
+      "threshold": 10.0,
+      "direction": "lower_is_better": true,
+      "weight": 0.25
+    }
+  },
+  "human_review": {
+    "trigger_threshold": 0.8,
+    "min_score_to_pass": 4,
+    "dimensions": [
+      {
+        "name": "lip_sync_accuracy",
+        "description": "口型与音频同步感",
+        "weight": 0.5
+      },
+      {
+        "name": "face_naturalness",
+        "description": "面部自然度",
+        "weight": 0.3
+      },
+      {
+        "name": "no_artifact",
+        "description": "无明显伪影",
+        "weight": 0.2
+      }
+    ]
+  },
+  "convergence": {
+    "max_iterations": 10,
+    "consecutive_passes": 3,
+    "patience": 2
+  }
+}
