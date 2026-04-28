@@ -1,0 +1,27 @@
+{
+  "_comment": "口型同步模型配置",
+  "model": {
+    "type": "wav2lip",
+    "checkpoint_path": "checkpoints/wav2lip_gan.pth",
+    "face_detector": "s3fd",
+    "face_detector_path": "checkpoints/s3fd.pth"
+  },
+  "wav2lip": {
+    "img_size": 96,
+    "batch_size": 2,
+    "num_epochs": 1,
+    "fps": 25,
+    "face_padding_ratio": 0.2
+  },
+  "preprocessing": {
+    "temp_dir": "workspace/temp",
+    "extract_frames": true,
+    "detect_faces": true
+  },
+  "output": {
+    "format": "mp4",
+    "codec": "libx264",
+    "crf": 18,
+    "preset": "medium"
+  }
+}
