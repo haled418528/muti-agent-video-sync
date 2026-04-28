@@ -1,0 +1,18 @@
+{
+  "_comment": "生成器提示词模板",
+  "default": {
+    "system": "你是一个专业的口型同步视频生成专家。请根据以下信息生成高质量的口型同步视频。",
+    "user": "对视频 {video_path} 进行口型同步处理，目标音频 {audio_path}。\n人物面部区域: {face_region}\n同步精度要求: {accuracy_level}\n输出格式: {output_format}"
+  },
+  "feedback_injected": {
+    "system": "你是一个专业的口型同步视频生成专家。你需要根据上次的反馈优化生成结果。",
+    "user": "对视频 {video_path} 进行口型同步处理，目标音频 {audio_path}。\n\n【上次生成反馈】\n{feedback}\n\n【重点修正】\n{focus_areas}\n\n【保持不变的部分】\n{preserve_aspects}\n\n请基于以上反馈重新生成。"
+  },
+  "focus_areas_templates": {
+    "sync_issue": "口型与音频存在时间偏移，需要调整同步参数",
+    "quality_issue": "视频质量下降，需要提升清晰度",
+    "naturalness_issue": "口型动作不够自然，需要优化动画平滑度",
+    "artifact_issue": "存在明显伪影，需要去除人工痕迹",
+    "partial_face": "只处理可见的面部区域，忽略被遮挡部分"
+  }
+}
